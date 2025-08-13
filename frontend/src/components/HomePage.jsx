@@ -131,28 +131,7 @@ const HomePage = ({ selectedCategory, onProductClick }) => {
         </div>
       </section>
 
-      {/* Promotional Banners - Como Netshoes */}
-      <section className="py-6 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg p-6 text-center">
-              <Truck size={32} className="mx-auto mb-2" />
-              <h3 className="font-bold text-lg mb-1">FRETE GRÁTIS</h3>
-              <p className="text-sm opacity-90">Acima de R$ 199,90</p>
-            </div>
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg p-6 text-center">
-              <CreditCard size={32} className="mx-auto mb-2" />
-              <h3 className="font-bold text-lg mb-1">12X SEM JUROS</h3>
-              <p className="text-sm opacity-90">No cartão de crédito</p>
-            </div>
-            <div className="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg p-6 text-center">
-              <Shield size={32} className="mx-auto mb-2" />
-              <h3 className="font-bold text-lg mb-1">COMPRA SEGURA</h3>
-              <p className="text-sm opacity-90">Site 100% protegido</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Featured Products - Layout Netshoes */}
       {featuredProducts.length > 0 && (
