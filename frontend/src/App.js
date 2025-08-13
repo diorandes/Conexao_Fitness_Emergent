@@ -1,53 +1,109 @@
-import { useEffect } from "react";
-import "./App.css";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import "./App.css";
+import Header from "./components/Header";
+import HomePage from "./components/HomePage";
+import ProductModal from "./components/ProductModal";
+import CartModal from "./components/CartModal";
+import LoginModal from "./components/LoginModal";
+import Footer from "./components/Footer";
+import AdminPanel from "./components/AdminPanel";
+import { Toaster } from "./components/ui/toaster";
+import { getCurrentUser } from "./data/mockData";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+function App() {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [showAdmin, setShowAdmin] = useState(false);
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
+  useEffect(() => {
+    setCurrentUser(getCurrentUser());
+  }, []);
+
+  const handleCategorySelect = (categorySlug) => {
+    setSelectedCategory(categorySlug);
+  };
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const handleLoginSuccess = (user) => {
+    setCurrentUser(user);
+    setIsLoginOpen(false);
+    if (user.isAdmin) {
+      setShowAdmin(true);
     }
   };
 
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
+  const AdminRoute = () => {
+    if (!currentUser?.isAdmin) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Acesso Negado</h1>
+            <p className="text-gray-600 mb-4">Você precisa ser um administrador para acessar esta página.</p>
+            <button 
+              onClick={() => setIsLoginOpen(true)}
+              className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700"
+            >
+              Fazer Login
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return <AdminPanel />;
+  };
 
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
+  const MainApp = () => (
+    <div className="App">
+      <Header
+        onCartClick={() => setIsCartOpen(true)}
+        onLoginClick={() => setIsLoginOpen(true)}
+        onCategorySelect={handleCategorySelect}
+      />
+      <main>
+        <HomePage
+          selectedCategory={selectedCategory}
+          onProductClick={handleProductClick}
+        />
+      </main>
+      <Footer />
+
+      {/* Modals */}
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
+
+      {isCartOpen && (
+        <CartModal onClose={() => setIsCartOpen(false)} />
+      )}
+
+      {isLoginOpen && (
+        <LoginModal
+          onClose={() => setIsLoginOpen(false)}
+          onLoginSuccess={handleLoginSuccess}
+        />
+      )}
+
+      <Toaster />
     </div>
   );
-};
 
-function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainApp />} />
+        <Route path="/admin" element={<AdminRoute />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
