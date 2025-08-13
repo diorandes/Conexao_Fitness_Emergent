@@ -13,8 +13,8 @@ export const categories = [
 export const products = [
   {
     id: 1,
-    name: 'Whey Protein Isolado 2kg',
-    brand: 'Growth',
+    name: 'Whey Protein Isolado Premium 2kg',
+    brand: 'Growth Supplements',
     category: 'whey-protein',
     price: 189.90,
     originalPrice: 249.90,
@@ -22,13 +22,13 @@ export const products = [
     image: 'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400&h=400&fit=crop',
     rating: 4.8,
     reviews: 1245,
-    description: 'Whey protein isolado de alta qualidade com 90% de pureza',
+    description: 'Whey protein isolado de alta qualidade com 90% de pureza. Ideal para ganho de massa muscular e recuperação pós-treino.',
     inStock: true,
     featured: true
   },
   {
     id: 2,
-    name: 'Creatina Monohidratada 300g',
+    name: 'Creatina Monohidratada Micronizada 300g',
     brand: 'Optimum Nutrition',
     category: 'creatina',
     price: 79.90,
@@ -37,13 +37,13 @@ export const products = [
     image: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=400&fit=crop',
     rating: 4.9,
     reviews: 892,
-    description: 'Creatina pura micronizada para maior absorção',
+    description: 'Creatina pura micronizada para máxima absorção e aumento de força e energia.',
     inStock: true,
     featured: true
   },
   {
     id: 3,
-    name: 'Pré-Treino Haze Hardcore 300g',
+    name: 'Pré-Treino Haze Hardcore Intense 300g',
     brand: 'RedCon1',
     category: 'pre-treino',
     price: 149.90,
@@ -52,13 +52,13 @@ export const products = [
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop',
     rating: 4.7,
     reviews: 567,
-    description: 'Pré-treino com fórmula avançada para máxima performance',
+    description: 'Pré-treino com fórmula avançada para máxima performance e energia intensa.',
     inStock: true,
     featured: true
   },
   {
     id: 4,
-    name: 'BCAA 2:1:1 120 Cápsulas',
+    name: 'BCAA 2:1:1 Premium 120 Cápsulas',
     brand: 'Integralmedica',
     category: 'bcaa',
     price: 54.90,
@@ -67,13 +67,13 @@ export const products = [
     image: 'https://images.unsplash.com/photo-1556909114-4cb3ef363b2d?w=400&h=400&fit=crop',
     rating: 4.6,
     reviews: 334,
-    description: 'Aminoácidos essenciais na proporção ideal',
+    description: 'Aminoácidos essenciais na proporção ideal para recuperação muscular.',
     inStock: true,
     featured: false
   },
   {
     id: 5,
-    name: 'Hipercalórico Mass Titanium 3kg',
+    name: 'Hipercalórico Mass Titanium 17500 - 3kg',
     brand: 'Max Titanium',
     category: 'massa-muscular',
     price: 129.90,
@@ -82,13 +82,13 @@ export const products = [
     image: 'https://images.unsplash.com/photo-1594737626072-90dc274bc2bd?w=400&h=400&fit=crop',
     rating: 4.5,
     reviews: 678,
-    description: 'Hipercalórico para ganho de massa muscular',
+    description: 'Hipercalórico para ganho de massa muscular com proteínas e carboidratos.',
     inStock: true,
     featured: false
   },
   {
     id: 6,
-    name: 'Termogênico Black Mamba 90 caps',
+    name: 'Termogênico Black Mamba Hyperrush 90 caps',
     brand: 'Iridium Labs',
     category: 'queimadores',
     price: 89.90,
@@ -97,14 +97,14 @@ export const products = [
     image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=400&fit=crop',
     rating: 4.4,
     reviews: 456,
-    description: 'Termogênico potente para queima de gordura',
+    description: 'Termogênico potente para aceleração do metabolismo e queima de gordura.',
     inStock: true,
     featured: false
   },
   {
     id: 7,
-    name: 'Multivitamínico A-Z 100 tabs',
-    brand: 'Universal',
+    name: 'Multivitamínico A-Z Complete 100 tablets',
+    brand: 'Universal Nutrition',
     category: 'vitaminas',
     price: 69.90,
     originalPrice: 89.90,
@@ -112,22 +112,52 @@ export const products = [
     image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=400&h=400&fit=crop',
     rating: 4.3,
     reviews: 789,
-    description: 'Complexo vitamínico completo para atletas',
+    description: 'Complexo vitamínico completo para atletas e praticantes de atividade física.',
     inStock: true,
     featured: false
   },
   {
     id: 8,
-    name: 'Barra Proteica Chocolate 12un',
+    name: 'Barra Proteica Chocolate Brownie 12 unidades',
     brand: 'Probiótica',
     category: 'barras-proteicas',
     price: 48.90,
     originalPrice: 59.90,
     discount: 18,
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1606312619811-57310d625b0d?w=400&h=400&fit=crop',
     rating: 4.2,
     reviews: 234,
-    description: 'Barras proteicas saborosas e nutritivas',
+    description: 'Barras proteicas saborosas com 20g de proteína cada, ideais para lanches.',
+    inStock: true,
+    featured: false
+  },
+  {
+    id: 9,
+    name: 'Glutamina Pure 300g',
+    brand: 'Integralmedica',
+    category: 'massa-muscular',
+    price: 65.90,
+    originalPrice: 79.90,
+    discount: 17,
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop',
+    rating: 4.4,
+    reviews: 412,
+    description: 'L-Glutamina pura para recuperação muscular e fortalecimento do sistema imune.',
+    inStock: true,
+    featured: false
+  },
+  {
+    id: 10,
+    name: 'Caseína Micellar Night Protein 900g',
+    brand: 'Growth Supplements',
+    category: 'whey-protein',
+    price: 99.90,
+    originalPrice: 129.90,
+    discount: 23,
+    image: 'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400&h=400&fit=crop',
+    rating: 4.6,
+    reviews: 298,
+    description: 'Proteína de absorção lenta ideal para consumo noturno e recuperação.',
     inStock: true,
     featured: false
   }
@@ -137,17 +167,25 @@ export const banners = [
   {
     id: 1,
     title: 'Suplementos da Cabeça aos Pés',
-    subtitle: 'Tudo para sua evolução fitness',
+    subtitle: 'Tudo para sua evolução fitness com os melhores preços',
     image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=600&fit=crop',
     cta: 'Confira',
     active: true
   },
   {
     id: 2,
-    title: 'Ofertas Black Friday',
-    subtitle: 'Até 50% OFF em suplementos selecionados',
+    title: 'Black Friday Fitness',
+    subtitle: 'Até 50% OFF em suplementos selecionados + Frete Grátis',
     image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop',
     cta: 'Aproveitar',
+    active: false
+  },
+  {
+    id: 3,
+    title: 'Novos Lançamentos',
+    subtitle: 'As últimas novidades em nutrição esportiva chegaram',
+    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1200&h=600&fit=crop',
+    cta: 'Descobrir',
     active: false
   }
 ];
@@ -156,16 +194,30 @@ export const testimonials = [
   {
     id: 1,
     name: 'João Silva',
-    text: 'Produtos de excelente qualidade, entrega rápida e preços justos!',
+    text: 'Produtos de excelente qualidade, entrega rápida e preços justos! Já sou cliente há 2 anos.',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop'
   },
   {
     id: 2,
     name: 'Maria Santos',
-    text: 'Melhor loja de suplementos online. Sempre compro aqui!',
+    text: 'Melhor loja de suplementos online. Sempre compro aqui! Atendimento excepcional.',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b830?w=100&h=100&fit=crop'
+  },
+  {
+    id: 3,
+    name: 'Carlos Oliveira',
+    text: 'Site confiável, produtos originais e entrega no prazo. Recomendo demais!',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop'
+  },
+  {
+    id: 4,
+    name: 'Ana Costa',
+    text: 'Ótima variedade de produtos e preços competitivos. Virei cliente fiel!',
+    rating: 5,
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop'
   }
 ];
 
@@ -258,6 +310,23 @@ export const orders = [
       city: 'São Paulo',
       state: 'SP',
       zipCode: '01234-567'
+    }
+  },
+  {
+    id: 1002,
+    userId: 1,
+    items: [
+      { ...products[2], quantity: 1 },
+      { ...products[4], quantity: 1 }
+    ],
+    total: 279.80,
+    status: 'processing',
+    date: '2025-01-12',
+    shipping: {
+      address: 'Av. Paulista, 456',
+      city: 'São Paulo',
+      state: 'SP',
+      zipCode: '01310-100'
     }
   }
 ];
