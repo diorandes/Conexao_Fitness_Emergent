@@ -53,18 +53,20 @@ const Header = ({ onCartClick, onLoginClick, onCategorySelect }) => {
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
             
-            {/* Logo with Image */}
-            <div className="flex items-center space-x-3">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_conexao-fitness/artifacts/bvu7z52d_Conex%C3%A3o%20Fitness_v2_sem%20fundo.png" 
-                alt="Conexão Fitness" 
-                className="h-12 w-12 object-contain"
-              />
+            {/* Logo with Enhanced Visibility */}
+            <div className="flex items-center space-x-4">
+              <div className="bg-white rounded-lg p-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_conexao-fitness/artifacts/db0rkddg_Design%20sem%20nome.png" 
+                  alt="Conexão Fitness" 
+                  className="h-14 w-14 object-contain transform hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="hidden md:block">
-                <h1 className="text-xl font-bold text-white leading-tight">
+                <h1 className="text-2xl font-bold text-white leading-tight tracking-wide">
                   conexão<span className="text-yellow-400">fitness</span>
                 </h1>
-                <p className="text-xs text-purple-200">Suplementos & Nutrição</p>
+                <p className="text-sm text-purple-200 font-medium">Suplementos & Nutrição Esportiva</p>
               </div>
             </div>
           </div>
