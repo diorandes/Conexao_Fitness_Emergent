@@ -53,13 +53,13 @@ const Header = ({ onCartClick, onLoginClick, onCategorySelect }) => {
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
             
-            {/* Logo with Brand Name - Enhanced Visibility */}
+            {/* Logo with Brand Name - Transparent Background */}
             <div className="flex items-center space-x-4">
-              <div className="bg-white rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
+              <div className="transform hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_conexao-fitness/artifacts/csbzj1ao_Design%20sem%20nome.png" 
+                  src="https://customer-assets.emergentagent.com/job_conexao-fitness/artifacts/86n8edqu_Logo%20Conex%C3%A3o%20Fitness%20Minimalista.png" 
                   alt="Conexão Fitness" 
-                  className="h-12 w-12 md:h-14 md:w-14 object-contain transform hover:scale-105 transition-transform duration-300"
+                  className="h-14 w-14 md:h-16 md:w-16 object-contain"
                 />
               </div>
               <div>
