@@ -53,26 +53,20 @@ const Header = ({ onCartClick, onLoginClick, onCategorySelect }) => {
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
             
-            {/* Logo with Enhanced Visibility */}
+            {/* Logo with Brand Name - Enhanced Visibility */}
             <div className="flex items-center space-x-4">
               <div className="bg-white rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_conexao-fitness/artifacts/db0rkddg_Design%20sem%20nome.png" 
+                  src="https://customer-assets.emergentagent.com/job_conexao-fitness/artifacts/csbzj1ao_Design%20sem%20nome.png" 
                   alt="Conexão Fitness" 
                   className="h-12 w-12 md:h-14 md:w-14 object-contain transform hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="hidden md:block">
-                <h1 className="text-2xl font-bold text-white leading-tight tracking-wide drop-shadow-sm">
+              <div>
+                <h1 className="text-xl md:text-2xl font-bold text-white leading-tight tracking-wide drop-shadow-sm">
                   conexão<span className="text-yellow-400">fitness</span>
                 </h1>
-                <p className="text-sm text-purple-200 font-medium">Suplementos & Nutrição Esportiva</p>
-              </div>
-              {/* Mobile Logo Text */}
-              <div className="md:hidden">
-                <h1 className="text-lg font-bold text-white leading-tight tracking-wide">
-                  conexão<span className="text-yellow-400">fitness</span>
-                </h1>
+                <p className="text-xs md:text-sm text-purple-200 font-medium">Suplementos & Nutrição Esportiva</p>
               </div>
             </div>
           </div>
