@@ -327,11 +327,11 @@ const AdminPanel = () => {
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="bg-white rounded-lg p-2 shadow-md">
+            <div>
               <img 
-                src="https://customer-assets.emergentagent.com/job_conexao-fitness/artifacts/csbzj1ao_Design%20sem%20nome.png" 
+                src="https://customer-assets.emergentagent.com/job_conexao-fitness/artifacts/86n8edqu_Logo%20Conex%C3%A3o%20Fitness%20Minimalista.png" 
                 alt="Conexão Fitness" 
-                className="h-8 w-8 object-contain"
+                className="h-10 w-10 object-contain"
               />
             </div>
             <div>
